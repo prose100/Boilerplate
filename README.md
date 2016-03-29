@@ -22,7 +22,7 @@ This boilerplate provides a kickstart for HTML, CSS, and JS projects.
 
  Simply [Download](https://github.com/prose100/boilerplate/zipball/master) or Fork this repository
 
-### If you want to build the plugin, using Grunt's features
+### If you want to build the boilerplate, using Grunt's features
  1. Install [NodeJS](http://nodejs.org).
  2. Install the Grunt CLI To install by running `npm install -g grunt-cli`. More details are available on their website http://gruntjs.com/getting-started.
  3. Install the NPM dependencies by running `npm install`.
