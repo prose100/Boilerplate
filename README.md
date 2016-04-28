@@ -4,7 +4,7 @@ This boilerplate provides a kickstart for HTML, CSS, and JS projects.
 
 ## Overview
 
-* Assets include Bootstrap 3.3.2, jQuery 1.11.1, Modernizr 2.8.3, and Skeleton 2.0.4
+* Assets include cdns for Bootstrap and jQuery, Modernizr 2.8.3, and Skeleton 2.0.4
 * Font Awesome cdn
 * Respond.js and HTML5Shim cdns
 * Easily modifiable index.html template to use either Bootstrap, Skeleton, or none
