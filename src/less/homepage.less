@@ -2,27 +2,112 @@
    Homepage
    ========================================================================== */
 
+//Places original psd on page.  Used to do pixel perfect recreation.
+body {
+  // background: url('../img/webpage.jpg') no-repeat;
+  height: 1500px;
+}
+
 /* ---------------------------------------------
       Header
    --------------------------------------------- */
 
 .main-header {
   font-family: myFirstFont;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  // background: url('../img/bg-main.png') repeat;
+
+  .logo {
+    float: left;
+  }
+
+  .site-guide {
+    float: right;
+
+    .social-list {
+      float: right;
+      margin-bottom: 10px;
+    
+      .social-link {
+        margin-left: 15px;
+      }
+    }
+
+    .form-search {
+      float: right;
+
+      .input-search {
+        margin-top: 5px;
+        height: 22px;
+      }
+    }
+
+    .nav-bar {
+      clear: right;
+
+      .nav-link {
+        color: @nav-gray;
+        margin-left: 48px;
+        font-size: 13.5px;
+        font-family: @karla-reg;
+      }
+    }
+  }
 }
-
-.logo-text {
-	text-indent: -9999px;
-}
-
-
 
 /* ---------------------------------------------
       Slider
    --------------------------------------------- */
 
-.cycle-prev, .cycle-next {
-	display: inline-block;
+.slider {
+  position: relative;
+
+  .slide-left {
+    float: left;
+    margin-right: 10px;
+    max-width: 55%;
+    
+    .product-info {
+      float: left; 
+      margin-bottom: 40px;
+    }
+    
+    .ipad-sm {
+      max-width: 218px;
+      max-height: 125px;
+    }
+
+    .ipad-sm-1 {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .slide-right {
+    float: left;
+    max-width: 40%;
+    margin-right: 0px;
+  }
+
+  .flex-prev, .flex-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+  }
+  .flex-prev {
+    left: 2%;
+  }
+  .flex-next {
+    right: 2%;
+  }
 }
+
+/* ---------------------------------------------
+      Feature
+   --------------------------------------------- */
+
 
 
 
@@ -34,7 +119,6 @@ footer {
 	height: 700px;
 	background-color: green;
 }
-
 
 /* ---------------------------------------------
       UpScroll

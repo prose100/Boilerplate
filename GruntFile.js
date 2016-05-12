@@ -213,8 +213,6 @@ module.exports = function(grunt) {
     }
   });
 
-
-
     
   /**
    * Utility function to register the minify task to grunt.
@@ -296,10 +294,7 @@ module.exports = function(grunt) {
     );
   };
 
-
-
   // register all the tasks for both development and production
-
 
   registerBuildTask(EnvType.dev);
   registerBuildTask(EnvType.prod);
