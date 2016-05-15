@@ -14,7 +14,7 @@ module.exports = function(grunt) {
   var BUILD_DIR_JS = BUILD_DIR + 'js/';
   var BUILD_DIR_JS_PLUGINS = BUILD_DIR_JS + 'plugins/';
   var BUILD_DIR_CSS = BUILD_DIR + 'css/';
-  var BUILD_FILE_JS = BUILD_DIR_JS + 'app.js';
+  var BUILD_FILE_JS = BUILD_DIR_JS + 'app-plugins.min.js';
 
   var SRC_DIR = 'src/';
   var SRC_DIR_JS = SRC_DIR + 'js/';
@@ -63,8 +63,7 @@ module.exports = function(grunt) {
     copy: {
       build: {
         cwd: SRC_DIR,
-        src: ['**', '!**/less/**', '**/views/**', '**/img/**', '**/assets/**'],   
-        // '!**/js/plugins/**'
+        src: ['**', '!**/less/**', '**/views/**', '**/img/**', '**/assets/**', '**/js/**'],   
         dest: BUILD_DIR,
         expand: true
       }
@@ -127,7 +126,7 @@ module.exports = function(grunt) {
           mangle: false
         },
         files: {
-          "dist/js/app.js": BUILD_FILE_JS
+          "dist/js/app-plugins.min.js": BUILD_FILE_JS
         }
       }
     },
@@ -154,7 +153,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'src/css',
-          src: ['*.css', '!*.min.css', '!style.css'], //??min.css needed
+          src: ['*.css', '!*.min.css'], //??min.css needed
           dest: 'dist/css',
           ext: '.min.css'
         }]
@@ -245,7 +244,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('scripts:' + mode,
       'Compiles the javascript files in ' + mode + ' mode',
-      ['concat', 'uglify', 'clean:scripts']
+      ['concat', 'uglify']
     );
   };
 
