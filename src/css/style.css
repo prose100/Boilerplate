@@ -55,6 +55,15 @@ body {
 a {
   text-decoration: none;
 }
+.col-left {
+  text-align: left;
+}
+.col-center {
+  text-align: center;
+}
+.col-right {
+  text-align: right;
+}
 /* ---------------------------------------------
       Header
    --------------------------------------------- */
@@ -65,9 +74,6 @@ a {
 }
 .main-header .logo {
   float: left;
-}
-.main-header .site-guide {
-  float: right;
 }
 .main-header .site-guide .social-list {
   float: right;
@@ -82,15 +88,6 @@ a {
 .main-header .site-guide .form-search .input-search {
   margin-top: 5px;
   height: 22px;
-}
-.main-header .site-guide .nav-bar {
-  clear: right;
-}
-.main-header .site-guide .nav-bar .nav-link {
-  color: gray;
-  margin-left: 48px;
-  font-size: 13.5px;
-  font-family: 'Karla', sans-serif;
 }
 /* ---------------------------------------------
       Slider
@@ -136,6 +133,19 @@ a {
 /* ---------------------------------------------
       Feature
    --------------------------------------------- */
+.feature .col {
+  background-color: lightblue;
+  border: 2px solid #000;
+  padding: 0px;
+  margin-top: 20px;
+}
+.feature .col img {
+  width: 100%;
+}
+.feature .col .text-wrapper {
+  padding: 0px 15px;
+  text-align: left;
+}
 /* ---------------------------------------------
       Footer
    --------------------------------------------- */
@@ -156,15 +166,19 @@ footer .nav-bar {
   display: none;
 }
 /*------------------------------------------
-  Responsive Grid Media Queries - 1280, 1024, 768, 480
-   1280-1024   - desktop (default grid)
-   1024-768    - tablet landscape
+  Responsive Grid Media Queries - 1200, 992, 768, 480
+   1280-992   - desktop (default grid)
+   992-768    - tablet landscape
    768-480     - tablet 
    480-less    - phone landscape & smaller
 
    Also, may modify and just make breakpoints where site goes wrong.
 --------------------------------------------*/
-@media all and (max-width: 768px) {
+@media all and (max-width: 769px) {
+  .main-header .social-list,
+  .main-header .form-search {
+    display: none;
+  }
   .ipads {
     display: none;
   }

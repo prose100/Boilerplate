@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Boilerplate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
     
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/apple-touch-icon.png" type="image/x-icon"/>
 
     <!-- Remember to replace these css files with minified versions after running 'grunt production' command-->
     <link href="css/reset.css" rel="stylesheet">
@@ -19,6 +20,9 @@
 
     <!-- Grid.css just has the bootstrap grid. Delete if not needed or if using full bootstrap -->
     <link href="css/grid.css" rel="stylesheet">
+
+    <!-- nav-menu.css used for plugin -->
+    <link href="css/nav-menu.css" rel="stylesheet">
 
     <!-- Choose Bootstrap of Skeleton - NOT Both - See them below. -->
     <!-- Bootstrap css file, if needed. Otherwise, delete. -->
@@ -49,28 +53,30 @@
         <div class="logo">
           <a href="index.html"><img src="img/logo.png" alt="logo"></a>
         </div>
-        <div class="site-guide">
-          <div class="social-list">
-            <a class="social-link" href="#"><img src="img/facebook.png" alt="facebook"></a>
-            <a class="social-link" href="#"><img src="img/twitter.png" alt="twitter"></a>
-            <a class="social-link" href="#"><img src="img/google.png" alt="google"></a>
-            <a class="social-link" href="#"><img src="img/youtube.png" alt="youtube"></a>
-          </div>
-          <form class="form-search" action="" method="">
-              <input class="input-search" type="text" name="search">
-              <button class="btn-search" type="submit"><img class="img-search" src="img/search.png" alt="search"></button>
-          </form>
-          <nav class="nav-bar">
-            <a class="nav-link" href="#">HOME</a>
-            <a class="nav-link" href="#">NEWS</a>
-            <a class="nav-link" href="#">PRODUCTS</a>
-            <a class="nav-link" href="#">FEATURES</a>
-            <a class="nav-link" href="#">CONTACT</a>
-          </nav>
-        </div>   <!-- end of site-guide -->
+        <div class="right-header">
+          <div class="site-guide">
+            <div class="social-and-search clearfix">
+              <div class="social-list">
+                <a class="social-link" href="#"><img src="img/facebook.png" alt="facebook"></a>
+                <a class="social-link" href="#"><img src="img/twitter.png" alt="twitter"></a>
+                <a class="social-link" href="#"><img src="img/google.png" alt="google"></a>
+                <a class="social-link" href="#"><img src="img/youtube.png" alt="youtube"></a>
+              </div>
+              <form class="form-search" action="" method="">
+                  <input class="input-search" type="text" name="search">
+                  <button class="btn-search" type="submit"><img class="img-search" src="img/search.png" alt="search"></button>
+              </form>
+            </div> <!-- end of social-and-search -->
+          </div>   <!-- end of site-guide -->
+          <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>  
+        </div> <!-- end of right-header -->
       </div>  <!-- end of container -->
     </header>
-        
+
     <section class="slider">
       <div class="container"> 
         <div class="flexslider">
@@ -114,10 +120,6 @@
       </div>  <!-- end of container -->
     </section> <!-- end of slider -->
 
-    <section class="feature">
-      
-    </section>
-
     <!-- Example use of Bootstrap with element.less -->
     <button type="button" class="btn btn-info btn-xs">Sample Button with Bootstrap and Less</button>
 
@@ -125,7 +127,6 @@
         <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
     </button>
     
-
   <!-- Example use of Skeleton. See getskeleton.com -->
     <!--  <div class="container">
         <h1>Sample Form from Skeleton</h1>
@@ -158,7 +159,6 @@
         </form>
      </div> -->  <!-- end of container -->
 
-
     <footer>
       <div class="container">
         <div class="uparrow" id="uparrow"></div>
@@ -171,7 +171,6 @@
           </nav>
       </div>  <!-- end of container -->
     </footer>
-
     
     <!-- Load Font Awesome asynchronously
     <script type="text/javascript">
@@ -193,8 +192,38 @@
     <!-- Bootstrap cdn for js file, if needed. Otherwise, delete. -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+    <script src="js/app.js"></script>
+
     <!-- Remove plugins.js for production version on index.html since all code is in app.js -->
     <script src="js/plugins/jquery.flexslider.js"></script>
+    <script src="js/plugins/nav-menu.js"></script>
+
+    <!-- navigation menu -->
+    <script>
+    $(function() {
+      $(".nav-menu").mobilemenu({
+        windowWidth: 753,
+        slideDuration: 500,
+        sidebarLocation: 'right',
+        slideDistance: 100,
+        moveBurgerX: 15,
+        moveBurgerY: -50,
+        moveSidebarX: 0,
+        moveSidebarY: -50,
+        burgerSpanHeight: 5,
+        burgerSpanWidth: 30,
+        burgerSpacing: 4,
+        burgerColor: '#777',
+        burgerVisible: true,
+        fixedBurger: false,
+        fixedSidebar: true,
+        burgerClass: 'burger',
+        sidebarClass: 'sidebar',
+        activeOverlayClass: 'activeOverlay'
+      });
+    });
+    </script>
+
     <script>
     $(window).load(function() {
       $('.flexslider').flexslider({
@@ -204,8 +233,7 @@
       });
     });
     </script>
-    <script src="js/app.js"></script>
-
+    
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
       <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

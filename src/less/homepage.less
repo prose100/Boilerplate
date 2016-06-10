@@ -12,6 +12,16 @@ a {
   text-decoration: none;
 }
 
+.col-left {
+  text-align: left;
+}
+.col-center {
+  text-align: center;
+}
+.col-right {
+  text-align: right;
+}
+
 /* ---------------------------------------------
       Header
    --------------------------------------------- */
@@ -22,42 +32,31 @@ a {
   margin-bottom: 50px;
   // background: url('../img/bg-main.png') repeat;
 
-  .logo {
-    float: left;
-  }
+    .logo {
+      float: left;
+    }
 
-  .site-guide {
-    float: right;
-
-    .social-list {
-      float: right;
-      margin-bottom: 10px;
+    .site-guide {
     
-      .social-link {
-        margin-left: 15px;
+      .social-list {
+        float: right;
+        margin-bottom: 10px;
+      
+        .social-link {
+          margin-left: 15px;
+        }
+      }
+
+      .form-search {
+        float: right;
+
+        .input-search {
+          margin-top: 5px;
+          height: 22px;
+        }
       }
     }
-
-    .form-search {
-      float: right;
-
-      .input-search {
-        margin-top: 5px;
-        height: 22px;
-      }
-    }
-
-    .nav-bar {
-      clear: right;
-
-      .nav-link {
-        color: @nav-gray;
-        margin-left: 48px;
-        font-size: 13.5px;
-        font-family: @karla-reg;
-      }
-    }
-  }
+  
 }
 
 /* ---------------------------------------------
@@ -111,7 +110,22 @@ a {
 /* ---------------------------------------------
       Feature
    --------------------------------------------- */
-
+.feature {
+  .col {
+    background-color: lightblue;
+    border: 2px solid #000;
+    padding: 0px;
+    margin-top: 20px;
+  
+    img {
+      width: 100%;
+    }
+    .text-wrapper {
+      padding: 0px 15px;
+      text-align: left;
+    }
+  }
+}
 
 
 

@@ -1,0 +1,79 @@
+
+.smobitrigger, .mnuclose { display: none; }
+
+.navigation nav ul li { display: inline-block; }
+
+.navigation nav ul li a {
+  color: #000;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 10px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.navigation nav ul li a:hover {
+  background: rgb(234, 214, 54);
+  color: #441B0A;
+}
+
+ @media all and (max-width : 768px) {
+
+  .smobitrigger, .mnuclose { display: inline-block; }
+
+  .smobitrigger {
+    color: #fff;
+    font-size: 30px;
+    line-height: 12px;
+    padding: 10px;
+  }
+
+  .mnuclose {}
+
+  .navigation nav ul {
+    padding-bottom: 40px;
+    overflow-y: auto;
+  }
+
+  .navigation nav ul li, .navigation nav ul li a { width: 100%; }
+
+  .navigation nav ul li a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .navigation nav ul li a:hover { background: rgba(0, 0, 0, 0.29); }
+
+  .navigation nav .mobimenu {
+    list-style: none;
+    padding: 20px;
+    margin: 0px;
+    width: 210px;
+    position: fixed;
+    height: 100%;
+    top: 0px;
+    right: -250px;
+  }
+
+  /*.mnuopn is passed into simpleMobileMenu.js*/
+  .mnuopn { 
+    right: 0px !important;
+    background-color: #ce9b52;
+  }
+
+  .navigation nav .mnuopn li a {
+    color: #fff;
+  }
+
+  /*gives overlay width and height when hamburger is clicked*/
+  .ovrActv {
+    position: fixed;
+    width: 100%;
+    height: 100%;  
+  }
+}
