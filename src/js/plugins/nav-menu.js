@@ -477,11 +477,22 @@
         var mr = 0;
 
         $overallWrapper.parents().map(function() {
-            pl = $(this).css('padding-left').replace(/[^\d.-]/g, '');
-            ml = $(this).css('margin-left').replace(/[^\d.-]/g, '');
+    
+            if (!($(this).css('padding-left')=='auto')) {
+                pl = $(this).css('padding-left').replace(/[^\d.-]/g, '');
+            }
             
-            pr = $(this).css('padding-right').replace(/[^\d.-]/g, '');
-            mr = $(this).css('margin-right').replace(/[^\d.-]/g, '');
+            if (!($(this).css('margin-left')=='auto')) {
+                ml = $(this).css('margin-left').replace(/[^\d.-]/g, '');
+            }
+
+            if (!($(this).css('padding-right')=='auto')) {
+                pr = $(this).css('padding-right').replace(/[^\d.-]/g, '');
+            }
+
+            if (!($(this).css('margin-right')=='auto')) {
+                mr = $(this).css('margin-right').replace(/[^\d.-]/g, '');
+            }
 
             sumLeft += parseInt(pl, 10) + parseInt(ml, 10);
             sumRight += parseInt(pr, 10) + parseInt(mr, 10);
@@ -511,7 +522,6 @@
             $overallWrapper.show();
             
             } else if (this.isMobile()) {
-                console.log('mobile and closed')
                 $sidebar.hide(); 
                 $this.hide();
                 $burger.show();
@@ -584,7 +594,6 @@
             if (_this.getScroll()) {
                 if (_this.getOpenMenuStatus()) {
                     _this.setPositionPropertyOuterWrapper($sidebar, $outerWrapper, $overallWrapper, 'slideOut');
-                    console.log('scoll, slideOut')
                 }
                 else {
                     _this.setPositionPropertyOuterWrapper($sidebar, $outerWrapper, $overallWrapper, 'slideIn');
