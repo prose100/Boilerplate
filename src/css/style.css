@@ -64,6 +64,11 @@ a {
 .col-right {
   text-align: right;
 }
+.img-responsive-fill {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 /* ---------------------------------------------
       Header
    --------------------------------------------- */
@@ -130,21 +135,52 @@ a {
 .slider .flex-next {
   right: 2%;
 }
+.slider .flex-control-thumbs li {
+  width: 50px;
+  left: 50%;
+  margin-left: -25px;
+  position: relative;
+}
+.slider .flex-control-thumbs li img {
+  height: 15px;
+  width: 15px;
+}
 /* ---------------------------------------------
-      Feature
+      Grid
    --------------------------------------------- */
-.feature .col {
+.grid {
+  margin-top: 45px;
+}
+.grid .img-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+.grid .img-wrapper .project-overlay {
+  display: none;
+}
+.grid .img-wrapper .project-overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
   background-color: lightblue;
-  border: 2px solid #000;
-  padding: 0px;
+  opacity: 0.5;
+}
+.grid .img-wrapper .project-overlay .content {
   margin-top: 20px;
 }
-.feature .col img {
-  width: 100%;
+.grid .img-wrapper .project-overlay .content img {
+  position: relative;
+  left: 50%;
+  margin-left: -70px;
 }
-.feature .col .text-wrapper {
-  padding: 0px 15px;
-  text-align: left;
+/* ---------------------------------------------
+      twoFullColumns
+     --------------------------------------------- */
+.twoFullColumns [class*=col] {
+  padding: 0px;
 }
 /* ---------------------------------------------
       Footer

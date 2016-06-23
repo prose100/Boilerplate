@@ -467,8 +467,9 @@
             }
     }
 
-     MobileMenu.prototype.overallWrapperPMLeftAndPMRight = function($overallWrapper) {
-        var _this = this;
+     //positions burger at edge of screeen by adding and subtracting all of the margins and paddings of the overallWrapper's parent elements
+    MobileMenu.prototype.overallWrapperPMLeftAndPMRight = function($overallWrapper) {
+
         var sumLeft = 0;
         var sumRight = 0;
         var pl = 0;
@@ -477,25 +478,23 @@
         var mr = 0;
 
         $overallWrapper.parents().map(function() {
+            var el = $(this);
+
+            var mLeft = el.css('margin-left');
+            var mRight = el.css('margin-right');
+            // el.css('margin-left', (parseInt(mLeft)-2) + 'px');
+            // var mRightChanged = el.css('margin-right');
     
-            if (!($(this).css('padding-left')=='auto')) {
+            // if (mRight == mRightChanged) {
+                //mr and ml are not auto
+                // el.css('margin-left', mLeft);
                 pl = $(this).css('padding-left').replace(/[^\d.-]/g, '');
-            }
-            
-            if (!($(this).css('margin-left')=='auto')) {
                 ml = $(this).css('margin-left').replace(/[^\d.-]/g, '');
-            }
-
-            if (!($(this).css('padding-right')=='auto')) {
                 pr = $(this).css('padding-right').replace(/[^\d.-]/g, '');
-            }
-
-            if (!($(this).css('margin-right')=='auto')) {
                 mr = $(this).css('margin-right').replace(/[^\d.-]/g, '');
-            }
-
-            sumLeft += parseInt(pl, 10) + parseInt(ml, 10);
-            sumRight += parseInt(pr, 10) + parseInt(mr, 10);
+                sumLeft += parseInt(pl, 10) + parseInt(ml, 10);
+                sumRight += parseInt(pr, 10) + parseInt(mr, 10);
+            // }           
         });
 
         $overallWrapper.css({'margin-left': -(sumLeft)});
@@ -531,6 +530,7 @@
                 if (this.getCheckIfJustChangedToMobile()) {
                     this.setPositionPropertyOuterWrapper($sidebar, $outerWrapper, $overallWrapper, 'init');
                     this.setCheckIfJustChangedToMobile(false);
+                    this.overallWrapperPMLeftAndPMRight($overallWrapper);
                 }
             
             } else if (this.getOpenMenuStatus()) {

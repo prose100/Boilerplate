@@ -51,7 +51,7 @@
     <header class="main-header">
       <div class="container clearfix">
         <div class="logo">
-          <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+          <a href="index.html"><img class="img-responsive" src="img/logo.png" alt="logo"></a>
         </div>
         <div class="right-header">
           <div class="site-guide">
@@ -81,7 +81,7 @@
       <div class="container"> 
         <div class="flexslider">
           <ul class="slides clearfix">
-            <li class="slide-1">
+            <li class="slide-1" data-thumb="img/pencil.png">
               <div class="slide-left">
                 <div class="product-info">
                   <h1>Feature Product #1</h1>
@@ -96,7 +96,7 @@
                   <img class="ipad-lg img-responsive" src="img/ipad-lg.png" />
               </div>  <!-- end of slide-right -->  
             </li> <!-- end of slide-1 -->
-            <li class="slide-2">
+            <li class="slide-2" data-thumb="img/pencil.png">
               <div class="slide-left">
                 <div class="product-info">
                   <h1>Feature Product #2</h1>
@@ -115,10 +115,110 @@
         </div>  <!-- end of flexslider -->
         <div class="custom-navigation">
           <a href="#" class="flex-prev"><img src="img/prev.png" alt="previous arrow"></a>
+          <div class="custom-controls-container">
+          </div>
           <a href="#" class="flex-next"><img src="img/next.png" alt="next arrow"></a>
         </div> <!-- end of custom navigation -->
       </div>  <!-- end of container -->
     </section> <!-- end of slider -->
+
+    <section class="grid">
+      <div class="container">
+        <div class="row portfolio">
+          <div class="project col-xs-12 col-sm-6 col-lg-4">
+            <a href="#">
+              <div class="img-wrapper">
+                <img class="img-responsive" src="http://placehold.it/400x150" alt="project-1">
+                <div class="project-overlay">
+                  <div class="content">
+                     <div class="row">
+                      <div class="col-sm-6">
+                        <img class="img-responsive" src="http://placehold.it/140x75" alt="project-1">
+                      </div>
+                      <div class="col-sm-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iusto excepturi repellat.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </img>
+              </div>
+            </a>
+          </div>
+          <div class="project col-xs-12 col-sm-6 col-lg-4">
+            <a href="#">
+              <div class="img-wrapper">
+                <img class="img-responsive" src="http://placehold.it/400x150" alt="project-2">
+                <div class="project-overlay">
+                  <div class="content">
+                    <h6>A DESTAPAR LA IMÁGEN</h6>
+                    <h6>TYPE: DISEÑO DE IDENTIDAD - BRANDING</h6>
+                    <h6>YEAR: RECOPILACIÓN DE PROYECTOS DESDE EL 2013</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project col-xs-12 col-sm-6 col-lg-4">
+            <a href="#">
+              <div class="img-wrapper">
+                <img class="img-responsive" src="http://placehold.it/400x150" alt="project-3">
+                <div class="project-overlay">
+                  <div class="content">
+                    <h6>CLIENT: YIPAO</h6>
+                    <h6>TYPE: DISEÑO DE INFORMACIÓN</h6>
+                    <h6>YEAR: MAYO / 2015</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <a href="#">
+              <div class="img-wrapper">
+                <img class="img-responsive" src="http://placehold.it/400x150" alt="project-4">
+                <div class="project-overlay">
+                  <div class="content">
+                    <h6>CLIENT: FRITO DESDE EL CASCARÓN</h6>
+                    <h6>TYPE: ANIMACIÓN - CORTOMETRAJE ANIMADO</h6>
+                    <h6>YEAR: MAYO / 2015</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <a href="#">
+              <div class="img-wrapper">
+                <img class="img-responsive" src="http://placehold.it/400x150" alt="project-5">
+                <div class="project-overlay">
+                  <div class="content">
+                    <h6>CLIENT: MUSEO DE LA QUINTA DE BOLIVAR</h6>
+                    <h6>TYPE: DISEÑO DE IDENTIDAD - BRANDING</h6>
+                    <h6>YEAR: RECOPILACIÓN DE PROYECTOS DESDE EL 2013</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <a href="#">
+              <div class="img-wrapper">
+                <img class="img-responsive" src="http://placehold.it/400x150" alt="project-6">
+                <div class="project-overlay">
+                  <div class="content">
+                    <h6>CLIENT: ARANGA</h6>
+                    <h6>TYPE: DISEÑO DE IDENTIDAD - BRANDING</h6>
+                    <h6>YEAR: NOVEMBRE / 2014</h6>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div> 
+    </section>
+
 
     <!-- Example use of Bootstrap with element.less -->
     <button type="button" class="btn btn-info btn-xs">Sample Button with Bootstrap and Less</button>
@@ -158,6 +258,21 @@
           </div>
         </form>
      </div> -->  <!-- end of container -->
+     
+     <section class="twoFullColumns">
+      <div class="row">
+        <div class="project col-sm-6">
+          <a href="#">
+            <img class="img-responsive-fill" src="http://placehold.it/1000x200" alt="project-1">
+          </a>
+        </div>
+        <div class="project col-sm-6">
+          <a href="#">
+            <img class="img-responsive-fill" src="http://placehold.it/1000x200" alt="project-2">
+          </a>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <div class="container">
@@ -229,6 +344,7 @@
       $('.flexslider').flexslider({
         animation: "slide",
         controlsContainer: $(".custom-controls-container"),
+        controlNav: "thumbnails",
         customDirectionNav: $(".custom-navigation a")
       });
     });

@@ -22,6 +22,12 @@ a {
   text-align: right;
 }
 
+.img-responsive-fill {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ---------------------------------------------
       Header
    --------------------------------------------- */
@@ -105,29 +111,70 @@ a {
   .flex-next {
     right: 2%;
   }
-}
 
-/* ---------------------------------------------
-      Feature
-   --------------------------------------------- */
-.feature {
-  .col {
-    background-color: lightblue;
-    border: 2px solid #000;
-    padding: 0px;
-    margin-top: 20px;
-  
-    img {
-      width: 100%;
-    }
-    .text-wrapper {
-      padding: 0px 15px;
-      text-align: left;
+  .flex-control-thumbs {
+    li {
+      width: 50px;
+      left: 50%;
+      margin-left: -25px;
+      position: relative;
+
+      img {
+        height: 15px;
+        width: 15px;
+      }
     }
   }
 }
 
+/* ---------------------------------------------
+      Grid
+   --------------------------------------------- */
 
+.grid {
+  margin-top: 45px;
+
+  .img-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    max-width: 400px;
+
+    .project-overlay {
+      display: none;
+    }
+
+    // &:hover {
+      .project-overlay {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: lightblue;
+        opacity: 0.5;
+    // }
+      .content {
+        margin-top: 20px;
+      
+        img {
+          position: relative;
+          left: 50%;
+          margin-left: -70px;
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------
+      twoFullColumns
+     --------------------------------------------- */  
+
+.twoFullColumns {
+  [class*=col] {
+    padding: 0px;
+  }
+}
 
 /* ---------------------------------------------
       Footer
