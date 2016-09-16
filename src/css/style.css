@@ -49,6 +49,9 @@
 /* ==========================================================================
    Homepage
    ========================================================================== */
+html {
+  overflow-x: hidden;
+}
 body {
   height: 1500px;
 }
@@ -80,19 +83,69 @@ a {
 .main-header .logo {
   float: left;
 }
-.main-header .site-guide .social-list {
+.main-header .right-header {
+  float: right;
+}
+.main-header .right-header .site-guide .social-list {
   float: right;
   margin-bottom: 10px;
 }
-.main-header .site-guide .social-list .social-link {
+.main-header .right-header .site-guide .social-list .social-link {
   margin-left: 15px;
 }
-.main-header .site-guide .form-search {
+.main-header .right-header .site-guide .form-search {
   float: right;
 }
-.main-header .site-guide .form-search .input-search {
+.main-header .right-header .site-guide .form-search .input-search {
   margin-top: 5px;
   height: 22px;
+}
+.main-header .right-header .menu-icon {
+  display: none;
+  float: right;
+}
+.main-header .right-header .nav-list > li {
+  float: left;
+  margin-right: 37px;
+}
+.main-header .right-header .nav-list li {
+  position: relative;
+}
+.main-header .right-header .nav-list li a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Arial";
+  color: #000;
+  font-weight: bold;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.main-header .right-header .nav-list li .sub-list {
+  width: 125px;
+  padding: 15px;
+  border: 1px solid #000;
+  background-color: #fff;
+  position: absolute;
+  display: none;
+  top: 25px;
+  left: 0px;
+  z-index: 9999;
+}
+.main-header .right-header .nav-list li .sub-list li {
+  /*block gives vertical sub-lists while float gives horizontal sub-lists*/
+  display: block;
+  /*float: left;*/
+}
+.main-header .right-header .nav-list li .sub-list li .sub-list {
+  /*.sub-list above also applies to .sub-list .sub-list*/
+  top: -25px;
+  left: 108px;
+}
+.nav-list .fa-caret-down,
+.nav-list .fa-caret-right {
+  font-size: 15px;
+  color: #000;
+  margin-left: 4px;
 }
 /* ---------------------------------------------
       Slider
@@ -217,6 +270,47 @@ footer .nav-bar {
   }
   .ipads {
     display: none;
+  }
+}
+@media only screen and (max-width: 769px) {
+  /*many desktop properties are overwritten below */
+  .main-header {
+    font-family: myFirstFont;
+    padding-top: 20px;
+    margin-bottom: 50px;
+  }
+  .main-header .container .right-header nav .menu-icon {
+    display: block;
+    float: none;
+  }
+  .main-header .container .right-header nav .nav-list {
+    display: none;
+    background: #555;
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    left: 0px;
+    top: 65px;
+    margin-top: 25px;
+    z-index: 9999;
+  }
+  .main-header .container .right-header nav .nav-list li {
+    float: none;
+    margin-bottom: 15px;
+  }
+  .main-header .container .right-header nav .nav-list li .sub-list {
+    display: none;
+    left: 75px;
+    top: -30px;
+    background: #555;
+    padding: 10px;
+  }
+  .main-header .container .right-header nav .nav-list li .sub-list .sub-list {
+    left: 125px;
+    top: -65px;
+  }
+  .main-header .container .right-header nav .nav-list li:last-child {
+    margin-bottom: 0px;
   }
 }
 /*-------------------------------------------------------------------------------*/

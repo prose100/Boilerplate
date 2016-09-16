@@ -27,11 +27,85 @@
 	}
 }
 
+
+@media only screen and (max-width: 769px) {
+  /*many desktop properties are overwritten below */
+  //rel and abs comments relate to the nav menu in mobile view; use the respective lines to 
+  //do one of the following:
+    //rel -- nav menu pushes content down
+    //abs -- nave menu slides over content
+
+  .main-header {
+    font-family: myFirstFont;
+    padding-top: 20px;
+    margin-bottom: 50px;
+
+    .container {
+      // padding: 0px; //rel
+
+      .logo {
+        // position: relative; //rel
+        // left: 15px; //rel
+      }
+      
+      .right-header {
+        // position: relative; //rel
+        // width: 100%; //rel
+        
+        nav {
+
+          .menu-icon {
+            display: block;
+            float: none;
+            // position: absolute; //rel
+            // right: 15px; //rel
+            // top: -50px; //rel
+          }
+
+          .nav-list {
+            display: none;
+            background: #555;
+            width: 100%;
+            padding: 15px; 
+
+            //Next four lines are used to place the nav-list absolute upon being toggled
+            position: absolute; //abs
+            left: 0px; //abs
+            top: 65px; //abs
+            margin-top: 25px; //abs
+           
+            z-index: 9999;
+
+            li {
+              float: none;
+              margin-bottom: 15px;
+
+              .sub-list {
+                display: none;
+                left: 75px; 
+                top: -30px;
+                background: #555;
+                padding: 10px;
+              
+                .sub-list { 
+                  left: 125px;
+                  top: -65px;
+                }
+              }
+            }
+          }
+          .nav-list li:last-child {
+             margin-bottom:  0px;  
+          }
+        }
+      }
+    }
+  }
+}
+
 @media all and (max-width: 480px) {
 	
 }
-
-
 
 /*-------------------------------------------------------------------------------*/
 
@@ -44,8 +118,6 @@
 @media screen and (orientation:landscape) { /* Landscape styles here */ 
 
 }
-
-
 
 
 /* Non-Retina */

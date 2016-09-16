@@ -2,6 +2,10 @@
    Homepage
    ========================================================================== */
 
+html {
+  overflow-x: hidden;
+}
+
 //Places original psd on page.  Used to do pixel perfect recreation.
 body {
   // background: url('../img/webpage.jpg') no-repeat;
@@ -38,9 +42,12 @@ a {
   margin-bottom: 50px;
   // background: url('../img/bg-main.png') repeat;
 
-    .logo {
-      float: left;
-    }
+  .logo {
+    float: left;
+  }
+
+  .right-header {
+    float: right;
 
     .site-guide {
     
@@ -62,7 +69,64 @@ a {
         }
       }
     }
-  
+
+    .menu-icon {
+      display: none;
+      float: right;
+    }
+
+    .nav-list > li {
+      float: left;
+      margin-right: 37px;
+    }
+
+    .nav-list {
+    
+      li {
+        position: relative;
+        
+        a {
+          text-transform: uppercase;
+          font-size: 14px;
+          font-family: "Arial";
+          color: #000;
+          font-weight: bold;
+          line-height: 1.2;
+          text-decoration: none;
+        }
+
+        .sub-list {
+          width: 125px;
+          padding: 15px;
+          border: 1px solid #000;
+          background-color: #fff;
+          position: absolute;
+          display: none;
+          top: 25px;
+          left: 0px;
+          z-index: 9999;
+          
+          li {
+            /*block gives vertical sub-lists while float gives horizontal sub-lists*/
+            display: block; 
+            /*float: left;*/ 
+
+            .sub-list {
+              /*.sub-list above also applies to .sub-list .sub-list*/
+              top: -25px;
+              left: 108px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+    
+.nav-list .fa-caret-down, .nav-list .fa-caret-right {
+  font-size: 15px;
+  color: #000;
+  margin-left: 4px;
 }
 
 /* ---------------------------------------------

@@ -61,18 +61,34 @@
                 <a class="social-link" href="#"><img src="img/twitter.png" alt="twitter"></a>
                 <a class="social-link" href="#"><img src="img/google.png" alt="google"></a>
                 <a class="social-link" href="#"><img src="img/youtube.png" alt="youtube"></a>
-              </div>
+              </div> <!-- end of social-list -->
               <form class="form-search" action="" method="">
                   <input class="input-search" type="text" name="search">
                   <button class="btn-search" type="submit"><img class="img-search" src="img/search.png" alt="search"></button>
               </form>
             </div> <!-- end of social-and-search -->
           </div>   <!-- end of site-guide -->
-          <ul class="nav-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>  
+          <nav class="clearfix">
+            <img class="menu-icon" src="img/menu-icon.png" alt="menu icon">
+            <ul class="nav-list">
+              <li><a href="#">home</a></li>
+              <li><a class="sub-link" href="#">Title<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul class="sub-list">
+                  <li><a href="#">submenu 1</a></li>
+                  <li><a href="#">submenu 2</a></li>
+                  <li><a class="sub-link" href="#">submenu 3<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    <ul class="sub-list">
+                      <li><a href="#">submenu 1</a></li>
+                      <li><a href="#">submenu 2</a></li>
+                      <li><a href="#">submenu 3</a></li>
+                    </ul> <!-- end of sub-list -->
+                  </li>
+                </ul>  <!-- end of sub-list -->
+              </li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </nav>  
         </div> <!-- end of right-header -->
       </div>  <!-- end of container -->
     </header>
@@ -311,33 +327,33 @@
 
     <!-- Remove plugins.js for production version on index.html since all code is in app.js -->
     <script src="js/plugins/jquery.flexslider.js"></script>
-    <script src="js/plugins/nav-menu.js"></script>
+    <!-- <script src="js/plugins/nav-menu.js"></script> -->
 
     <!-- navigation menu -->
-    <script>
-    $(function() {
-      $(".nav-menu").mobilemenu({
-        windowWidth: 753,
-        slideDuration: 500,
-        sidebarLocation: 'right',
-        slideDistance: 100,
-        moveBurgerX: 15,
-        moveBurgerY: -50,
-        moveSidebarX: 0,
-        moveSidebarY: -50,
-        burgerSpanHeight: 5,
-        burgerSpanWidth: 30,
-        burgerSpacing: 4,
-        burgerColor: '#777',
-        burgerVisible: true,
-        fixedBurger: false,
-        fixedSidebar: false,
-        burgerClass: 'burger',
-        sidebarClass: 'sidebar',
-        activeOverlayClass: 'activeOverlay'
-      });
-    });
-    </script>
+    <!--<script>
+          $(function() {
+            $(".nav-menu").mobilemenu({
+              windowWidth: 753,
+              slideDuration: 500,
+              sidebarLocation: 'right',
+              slideDistance: 100,
+              moveBurgerX: 15,
+              moveBurgerY: -50,
+              moveSidebarX: 0,
+              moveSidebarY: -50,
+              burgerSpanHeight: 5,
+              burgerSpanWidth: 30,
+              burgerSpacing: 4,
+              burgerColor: '#777',
+              burgerVisible: true,
+              fixedBurger: false,
+              fixedSidebar: false,
+              burgerClass: 'burger',
+              sidebarClass: 'sidebar',
+              activeOverlayClass: 'activeOverlay'
+            });
+          });
+      </script> -->
 
     <script>
     $(window).load(function() {
